@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="history-button">
+            <button onclick="toggleHistory()">Show History</button>
+        </div>
+        <div class="history">
+            <h2>Calculation History</h2>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="screen">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="buttons">
+            <table>
+                <tr>
+                    <th><button onclick="appendToDisplay('1')">1</button></th>
+                    <th><button onclick="appendToDisplay('2')">2</button></th>
+                    <th><button onclick="appendToDisplay('3')">3</button></th>
+                    <th><button class="operator" onclick="appendToDisplay('+')">+</button></th>
+                </tr>
+                <tr>
+                    <th><button onclick="appendToDisplay('4')">4</button></th>
+                    <th><button onclick="appendToDisplay('5')">5</button></th>
+                    <th><button onclick="appendToDisplay('6')">6</button></th>
+                    <th><button class="operator" onclick="appendToDisplay('-')">-</button></th>
+                </tr>
+                <tr>
+                    <th><button onclick="appendToDisplay('7')">7</button></th>
+                    <th><button onclick="appendToDisplay('8')">8</button></th>
+                    <th><button onclick="appendToDisplay('9')">9</button></th>
+                    <th><button class="operator" onclick="appendToDisplay('*')">*</button></th>
+                </tr>
+                <tr>
+                    <th><button onclick="appendToDisplay('0')">0</button></th>
+                    <th><button onclick="appendToDisplay('.')">.</button></th>
+                    <th><button class="operator" onclick="appendToDisplay('/')">/</button></th>
+                    <th><button id="calculate" onclick="calculate()">=</button></th>
+                </tr>
+                <tr>
+                    <th><button id="clear" onclick="clearDisplay()">C</button></th>
+                </tr>
+            </table>
+            <th></th>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
